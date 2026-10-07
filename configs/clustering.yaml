@@ -1,0 +1,9 @@
+task: clustering
+random_state: 42
+cv:
+  folds: 3
+  strategy: silhouette
+models:
+  enabled: [kmeans, agglomerative, gaussian_mixture]
+tracking:
+  mlflow: true

@@ -1,0 +1,16 @@
+task: regression
+target: target
+random_state: 42
+test_size: 0.2
+cv:
+  folds: 5
+  strategy: kfold
+optimization:
+  enabled: true
+  trials: 15
+models:
+  enabled: [linear_regression, ridge, random_forest, gradient_boosting]
+evaluation:
+  primary_metric: r2
+tracking:
+  mlflow: true
